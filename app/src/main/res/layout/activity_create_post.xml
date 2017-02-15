@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.firebase.postsactivity.CreatePost"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/toolbar"
+        >
+       <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Post"
+            android:textColor="#fff"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+
+            />
+   </android.support.v7.widget.Toolbar>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/layout"
+        >
+
+        <com.firebase.postsactivity.ResizableImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:maxHeight="100dp"
+            android:src="@drawable/two"
+            android:id="@+id/createpostimage"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/createpostbutton"
+    android:orientation="vertical"
+    android:layout_marginBottom="12dp">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/title"
+        android:hint="Title"
+        android:layout_margin="12dp"
+        android:background="@drawable/rectange"
+        android:padding="6dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/description"
+        android:hint="Description"
+        android:layout_margin="12dp"
+        android:background="@drawable/rectange"
+        android:padding="6dp"
+        />
+
+</LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:text="Create Post"
+        android:textColor="#fff"
+        android:id="@+id/createpostbutton"
+        />
+
+</RelativeLayout>
